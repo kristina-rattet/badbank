@@ -17,15 +17,15 @@ const UpdateProfilePopUp = ({ handleClose }) => {
 
   //Registration validation schema using yup
   const validationSchema = yup.object({
-    name: yup.string().required("A user name is required"),
+    name: yup.string().required("Name is required"),
     email: yup
       .string()
-      .email("Please enter a valid email address")
-      .required("An email is required"),
+      .email("Enter a valid email address")
+      .required("Email is required"),
     password: yup
       .string()
-      .min(8, "Your chosen password should be at least 8 characters long")
-      .required("A password is required"),
+      .min(8, "Password should be at least 8 characters long")
+      .required("Password is required"),
     confirmPassword: yup
       .string()
       .required("Please confirm your password")
@@ -50,7 +50,7 @@ const UpdateProfilePopUp = ({ handleClose }) => {
         );
 
         if (isDuplicate) {
-          toast.error("This email already in use");
+          toast.error("Email already in use");
           return;
         }
       }
@@ -77,7 +77,7 @@ const UpdateProfilePopUp = ({ handleClose }) => {
 
       formik.resetForm();
       handleClose();
-      toast.success("Your profile has been updated!");
+      toast.success("Profile Updated!");
       return;
     },
   });
@@ -92,7 +92,7 @@ const UpdateProfilePopUp = ({ handleClose }) => {
         <div className="box">
           <div className="card">
             <div className="card-body">
-              <span className="">Update Your User Profile</span>
+              <span className="">Update User Profile</span>
               <hr />
               <div>
                 <Box m={2}>

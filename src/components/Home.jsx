@@ -18,13 +18,13 @@ const Home = () => {
     <>
       <div className="card-container">
         <div className="card" style={customStyles}>
-          <h5 className="card-title">Welcome to Bad Bank</h5>
-          <img src="/images/piggybank.jpeg" className="card-img-top" alt="..." />
+          <h5 className="card-title">Bad Bank</h5>
+          <img src="/images/money.jpg" className="card-img-top" alt="..." />
           <div className="card-body">
             <p className="card-text">
-              What good is a relationship if you can't have trust? At Bad Bank, we believe in the honor system. 
-              And we believe in you. That's why we will never violiate yur trust and will
-              <span className="bad-policy-practice">NEVER</span> secure your data.
+              Welcome! to the safest bank in the virtual world. We promise you
+              that we will
+              <span className="bad-policy-practice">not</span> secure your data.
             </p>
           </div>
         </div>

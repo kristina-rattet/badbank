@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import createTransaction from "../helpers/createTransaction";
 
 import { Button, TextField, Box } from "@mui/material";
-const Withdrawal = () => {
+const Withdraw = () => {
   const [isDisabled, setIsDisabled] = useState(true);
   const { user, setUser, loggedInUser, setLoggedInUser } = useUserContext();
   const [balance, setBalance] = useState();
@@ -17,8 +17,8 @@ const Withdrawal = () => {
       .number()
       .min(1, "Must be greater or equal than $1")
       .max(loggedInUser.balance, "Insufficient Funds")
-      .required("A withdrawal amount is required")
-      .typeError("The withdrawal amount must be a number"),
+      .required("Withdraw Amount is required")
+      .typeError("The withdraw amount must be a number"),
   });
 
   const formik = useFormik({
@@ -31,7 +31,7 @@ const Withdrawal = () => {
     onSubmit: () => {
       //Verify if there's logged in user
       if (!loggedInUser) {
-        toast.error("Please login to initiate your transaction.");
+        toast.error("Please login to make a successful transaction");
         return;
       }
 
@@ -48,7 +48,7 @@ const Withdrawal = () => {
         if (u.email === loggedInUser.email) {
           u.balance -= witAmount;
           newBalance = u.balance;
-          const newTransaction = createTransaction("Make a Withdrawal", witAmount);
+          const newTransaction = createTransaction("Withdraw", witAmount);
           u.transactionHistory.push(newTransaction);
           setBalance(u.balance);
         }
@@ -58,7 +58,7 @@ const Withdrawal = () => {
       setUser(newData);
       setLoggedInUser((prev) => ({ ...prev, balance: newBalance }));
       formik.resetForm();
-      toast.success("Your withdrawal was succesful.");
+      toast.success("Withdraw succesful");
       return;
     },
   });
@@ -88,8 +88,8 @@ const Withdrawal = () => {
     <>
       {!loggedInUser ? (
         <>
-          <h3>Withdrawal</h3>
-          <p>Please login to your account.</p>
+          <h3>Withdraw</h3>
+          <p>Please login to your account</p>
         </>
       ) : (
         <div className="card" style={customStyles}>
@@ -125,7 +125,7 @@ const Withdrawal = () => {
                   onClick={formik.handleSubmit}
                   disabled={isDisabled}
                 >
-                  Withdrawal
+                  Withdraw
                 </Button>
               </Box>
             </div>
@@ -136,4 +136,4 @@ const Withdrawal = () => {
   );
 };
 
-export default Withdrawal;
+export default Withdraw;

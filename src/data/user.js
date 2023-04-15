@@ -1,8 +1,8 @@
 const users = [
   {
-    userPic: "/images/AccountPic0.png",
-    name: "New User 1",
-    email: "kbeaver@gmail.com",
+    userPic: "/images/Avatar0.png",
+    name: "Abel",
+    email: "abel@mit.edu",
     password: "secret",
     balance: 100,
     transactionHistory: [],
