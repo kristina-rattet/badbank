@@ -19,7 +19,7 @@ const Home = () => {
       <div className="card-container">
         <div className="card" style={customStyles}>
           <h5 className="card-title">Welcome to Bad Bank</h5>
-          <img src="/images/piggy.jpg" className="card-img-top" alt="..." />
+          <img src="/images/piggybank.jpeg" className="card-img-top" alt="..." />
           <div className="card-body">
             <p className="card-text">
               What good is a relationship if you can't have trust? At Bad Bank, we believe in the honor system. 
