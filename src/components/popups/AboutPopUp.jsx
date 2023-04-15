@@ -12,24 +12,24 @@ const AboutPopUp = ({ handleClose }) => {
               <div>
                 <Box m={2} className="custom-btn-group">
                   <div>
-                    <h2>What is Bad Bank?</h2>
+                    <h2>Welcome to Bad Bank</h2>
                     <p>
-                      Bad Bank is the Capstone Project for Module 2 in the{" "}
-                      <a href="https://executive-ed.xpro.mit.edu/professional-certificate-coding?utm_source=Google&utm_network=g&utm_medium=c&utm_term=mit%20full%20stack%20developer&utm_location=9011929&utm_campaign_id=17059210457&utm_adset_id=135511781189&utm_ad_id=594862351424">
-                        MIT - Fullstack Development with MERN
+                      Bad Bank is my project submission for Module 2 in the{" "}
+                      <a href="https://executive-ed.xpro.mit.edu/professional-certificate-coding-womens-cohort">
+                        MIT - Professional Certificate in Coding - For Women
                       </a>
-                      . It is called Bad Bank due to the users data exposured in
-                      the UI (intentionally).
+                      . The project is referred to as "Bad Bank" because it exposers its users' data to
+                      the UI.
                       <br /> <br />
-                      It consists of a simple React application where the
-                      students apply concepts such as hooks, context, routing,
-                      and form validations. As well, for the first attempt from
-                      the students to deploy a React application using AWS S3
+                      This project submission consists of a simple React application that demonstrates 
+                      concepts such as hooks, context, routing,
+                      and form validations. 
+                      It also showcases demonstrates the deployment of a React application using AWS S3
                       Buckets.
                       <br /> <br />
                       <div className="features">
                         <div>
-                          List of technologies and libraries used:
+                         Technologies and Libraries used within this project:
                           <ul>
                             <li>React JS</li>
                             <li>Formik</li>
@@ -41,26 +41,26 @@ const AboutPopUp = ({ handleClose }) => {
                           </ul>
                         </div>
                         <div>
-                          Functionalities available:
+                          Functionalities available  within this project:
                           <ul>
-                            <li>Create Account</li>
-                            <li>Login to Account</li>
-                            <li>Edit Account</li>
-                            <li>Transactions List</li>
-                            <li>Deposit</li>
-                            <li>Withdraw</li>
-                            <li>Totals Charts</li>
+                            <li>Create Your Account</li>
+                            <li>Login to Your Account</li>
+                            <li>Modify Your Account Information</li>
+                            <li>Transactions History</li>
+                            <li>Make a Deposit</li>
+                            <li>Make a Withdrawal</li>
+                            <li>Display Totals Chart</li>
                           </ul>
                         </div>
                       </div>
                     </p>
                     <h5>
-                      Kevin Grimaldi <h6>MIT Student</h6>
+                      Kristina Rattet <h6>MIT xPro Student</h6>
                     </h5>
 
                     <h6>
-                      <a href="https://github.com/anthgrim/BadBank">
-                        GitHub Repo
+                      <a href="https://github.com/kristina-rattet/badbank.git">
+                        Go to My Bad Bank GitHub Repository
                       </a>
                     </h6>
                   </div>
