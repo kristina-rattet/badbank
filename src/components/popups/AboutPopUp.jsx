@@ -41,7 +41,7 @@ const AboutPopUp = ({ handleClose }) => {
                           </ul>
                         </div>
                         <div>
-                          Functionalities available  within this project:
+                          Functionalities available within this project:
                           <ul>
                             <li>Create Your Account</li>
                             <li>Login to Your Account</li>
