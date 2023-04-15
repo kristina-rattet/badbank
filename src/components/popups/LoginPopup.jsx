@@ -13,8 +13,8 @@ const LoginPopUp = ({ handleClose }) => {
 
   //Validation schema
   const validationSchema = yup.object({
-    email: yup.string().required("An email is required"),
-    password: yup.string().required("A password is required"),
+    email: yup.string().required("Email is required"),
+    password: yup.string().required("Password is required"),
   });
 
   const formik = useFormik({
@@ -31,13 +31,13 @@ const LoginPopUp = ({ handleClose }) => {
       );
 
       if (!targetUser) {
-        toast.error("This username does not exist");
+        toast.error("User does not exist");
         return;
       }
 
       //Validate password
       if (targetUser.password !== formik.values.password) {
-        toast.warn("Invalid credentials. Try  again.");
+        toast.warn("Invalid credentials");
         return;
       }
 
@@ -46,7 +46,7 @@ const LoginPopUp = ({ handleClose }) => {
       formik.resetForm();
       handleClose();
       navigate("/myAccount");
-      toast.success(`Welcome to Bad Bank, ${targetUser.name}!`);
+      toast.success(`Welcome, ${targetUser.name}!`);
       return;
     },
   });
