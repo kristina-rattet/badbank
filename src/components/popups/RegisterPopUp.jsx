@@ -21,15 +21,15 @@ const RegisterPopUp = ({ handleClose }) => {
 
   //Registration validation schema using yup
   const validationSchema = yup.object({
-    name: yup.string().required("A user name is required"),
+    name: yup.string().required("Name is required"),
     email: yup
       .string()
-      .email("Please enter a valid email address")
-      .required("An email is required"),
+      .email("Enter a valid email address")
+      .required("Email is required"),
     password: yup
       .string()
-      .min(8, "Your chosen password should be at least 8 characters long")
-      .required("A password is required"),
+      .min(8, "Password should be at least 8 characters long")
+      .required("Password is required"),
     confirmPassword: yup
       .string()
       .required("Please confirm your password")
@@ -38,7 +38,7 @@ const RegisterPopUp = ({ handleClose }) => {
 
   const formik = useFormik({
     initialValues: {
-      userPic: "/images/AccountPic0.png",
+      userPic: "/images/Avatar0.png",
       name: "",
       email: "",
       password: "",
@@ -53,7 +53,7 @@ const RegisterPopUp = ({ handleClose }) => {
       );
 
       if (isDuplicate) {
-        toast.error("This email is already in use");
+        toast.error("Email already in use");
         return;
       }
 
@@ -69,7 +69,7 @@ const RegisterPopUp = ({ handleClose }) => {
       setUser((prev) => [...prev, persona]);
       formik.resetForm();
       setOtherAccount((prev) => !prev);
-      toast.success("You have successfully registered your account.");
+      toast.success("Successful user registration");
       return;
     },
   });
@@ -151,19 +151,19 @@ const RegisterPopUp = ({ handleClose }) => {
                         onChange={formik.handleChange}
                         label="Avatar"
                       >
-                        <MenuItem value="/images/AccountPic0.png">Default</MenuItem>
-                        <MenuItem value="/images/AccountPic1.png">
+                        <MenuItem value="/images/Avatar0.png">Default</MenuItem>
+                        <MenuItem value="/images/Avatar1.png">
                           Female 1
                         </MenuItem>
-                        <MenuItem value="/images/AccountPic5.png">
+                        <MenuItem value="/images/Avatar5.png">
                           Female 2
                         </MenuItem>
-                        <MenuItem value="/images/AccountPic6.png">
+                        <MenuItem value="/images/Avatar6.png">
                           Female 3
                         </MenuItem>
-                        <MenuItem value="/images/AccountPic2.png">Male 1</MenuItem>
-                        <MenuItem value="/images/AccountPic4.png">Male 2</MenuItem>
-                        <MenuItem value="/images/AccountPic3.png">Male 3</MenuItem>
+                        <MenuItem value="/images/Avatar2.png">Male 1</MenuItem>
+                        <MenuItem value="/images/Avatar4.png">Male 2</MenuItem>
+                        <MenuItem value="/images/Avatar3.png">Male 3</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
