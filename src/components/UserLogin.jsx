@@ -9,19 +9,19 @@ import getTotal from "../helpers/getTotal";
 import UpdateProfilePopUp from "./popups/UpdateProfilePopUp";
 import Chart from "./Chart";
 
-const UserAccount = () => {
+const UserLogin = () => {
   const { loggedInUser } = useUserContext();
   const [isUpdatePopUpOpen, setIsUpdatePopUpOpen] = useState(false);
 
   const totalDeposits = getTotal("Deposit", loggedInUser.transactionHistory);
-  const totalWithdraws = getTotal("Withdraw", loggedInUser.transactionHistory);
+  const totalWithdrawals = getTotal("Withdrawal", loggedInUser.transactionHistory);
 
   const [transactionData, setTransactionData] = useState({
-    labels: ["Total Amount Deposits", "Total Amount Withdraws"],
+    labels: ["Total Amount of Deposits", "Total Amount of Withdrawals"],
     datasets: [
       {
         label: "Total",
-        data: [totalDeposits, totalWithdraws],
+        data: [totalDeposits, totalWithdrawals],
         backgroundColor: ["rgba(75, 192, 192, 0.5)", "rgba(255, 99, 132, 0.5)"],
         borderColor: ["rgb(75, 192, 192)", "rgb(255, 99, 132)"],
         borderWith: 2,
@@ -60,4 +60,4 @@ const UserAccount = () => {
   );
 };
 
-export default UserAccount;
+export default UserLogin;

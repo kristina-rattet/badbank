@@ -18,7 +18,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
             <Route path="deposit" element={<Deposit />} />
-            <Route path="withdraw" element={<Withdrawal />} />
+            <Route path="withdrawal" element={<Withdrawal />} />
             <Route path="myAccount" element={<UserLogin />} />
             <Route path="allData" element={<AllData />} />
           </Route>
