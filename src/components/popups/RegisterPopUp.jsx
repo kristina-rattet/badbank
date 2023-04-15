@@ -161,9 +161,9 @@ const RegisterPopUp = ({ handleClose }) => {
                         <MenuItem value="/images/AccountPic6.png">
                           Female 3
                         </MenuItem>
-                        <MenuItem value="/images/AccountPic.png">Male 1</MenuItem>
-                        <MenuItem value="/images/AccountPic.png">Male 2</MenuItem>
-                        <MenuItem value="/images/AccountPic.png">Male 3</MenuItem>
+                        <MenuItem value="/images/AccountPic2.png">Male 1</MenuItem>
+                        <MenuItem value="/images/AccountPic4.png">Male 2</MenuItem>
+                        <MenuItem value="/images/AccountPic3.png">Male 3</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
